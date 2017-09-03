@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const Pornpics = require('..')
 const program = require('commander')
 const { assert } = require('chai')
