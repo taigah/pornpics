@@ -11,6 +11,11 @@
   },
   "author": "taigah.dev@gmail.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taigah/pornpics.git",
+    "web": "https://github.com/taigah/pornpics"
+  },
   "dependencies": {
     "async": "^2.5.0",
     "bluebird": "^3.5.0",
