@@ -12,16 +12,16 @@ pornpics javascript crawler is a node module that allows you to crawl [pornpics.
 
 Install globally
 ```bash
-npm i -g pornpics-crawler
+npm i -g pornpics
 or
-yarn global add pornpics-crawler
+yarn global add pornpics
 ```
 
 Install localy
 ```bash
-npm i pornpics-crawler
+npm i pornpics
 or
-yarn add pornpics-crawler
+yarn add pornpics
 ```
 
 ## CLI usage (global)
