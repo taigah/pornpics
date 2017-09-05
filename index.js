@@ -12,9 +12,7 @@ const request = require('request-promise-native').defaults({
 })
 
 class Pornpics extends EventEmitter {
-  constructor ({ url, page, limit, dest, aggregate, cover }) {
-    super()
-
+  crawl ({ url, page, limit, dest, aggregate, cover }) {
     this.url = url
     this.page = Math.floor(page) || 1
     this.limit = Math.floor(limit) || 1

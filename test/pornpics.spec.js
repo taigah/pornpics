@@ -10,7 +10,8 @@ const Pornpics = require('..')
 
 describe('Pornpics', _ => {
   it('should throw on 404 errors', done => {
-    const crawler = new Pornpics({
+    const crawler = new Pornpics()
+    crawler.crawl({
       url: 'https://www.pornpics.com/404'
     })
 
@@ -23,7 +24,8 @@ describe('Pornpics', _ => {
 
   describe('#galleries', _ => {
     it('should crawl gallery informations', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/galleries/teen-girls-keisha-and-natalie-throw-an-all-lesbian-pool-party/'
       })
 
@@ -40,7 +42,8 @@ describe('Pornpics', _ => {
 
   describe('#categories', _ => {
     it('should crawl gallery', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/ass/'
       })
       sinon.spy(crawler, 'scanGallery')
@@ -60,7 +63,8 @@ describe('Pornpics', _ => {
     })
 
     it('should crawl gallery with a custom start page and limit', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/ass/',
         page: 3,
         limit: 2
@@ -90,7 +94,8 @@ describe('Pornpics', _ => {
     })
 
     it('should save gallery pictures', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/galleries/teen-girls-keisha-and-natalie-throw-an-all-lesbian-pool-party/',
         dest
       })
@@ -110,7 +115,8 @@ describe('Pornpics', _ => {
     })
 
     it('should save category pictures', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/ass/',
         dest
       })
@@ -130,7 +136,8 @@ describe('Pornpics', _ => {
     })
 
     it('should save category covers', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/ass/',
         dest,
         cover: true
@@ -151,7 +158,8 @@ describe('Pornpics', _ => {
     })
 
     it('should save category pictures and aggregate', done => {
-      const crawler = new Pornpics({
+      const crawler = new Pornpics()
+      crawler.crawl({
         url: 'https://www.pornpics.com/ass/',
         dest,
         aggregate: true
