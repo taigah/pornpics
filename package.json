@@ -1,6 +1,6 @@
 {
   "name": "pornpics",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "javascript crawler is a node module that allows you to crawl pornpics.com and save picture automatically.",
   "main": "index.js",
   "scripts": {
